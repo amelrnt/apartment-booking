@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_booking_request_wizard_form" model="ir.ui.view">
+    <field name="name">booking.request.wizard.form</field>
+    <field name="model">booking.request.wizard</field>
+    <field name="arch" type="xml">
+      <form string="Request Booking">
+        <group>
+          <group>
+            <field name="unit_id" readonly="1" force_save="1"/>
+            <field name="customer_id"/>
+          </group>
+          <group>
+            <field name="checkin_date"/>
+            <field name="checkout_date"/>
+          </group>
+        </group>
+        <footer>
+          <button name="action_process" string="Check Availability" type="object" class="btn-primary"/>
+          <button string="Cancel" class="btn-secondary" special="cancel"/>
+        </footer>
+      </form>
+    </field>
+  </record>
+
+  <record id="action_booking_request_wizard" model="ir.actions.act_window">
+    <field name="name">Request Booking</field>
+    <field name="res_model">booking.request.wizard</field>
+    <field name="view_mode">form</field>
+    <field name="target">new</field>
+  </record>
+</odoo>

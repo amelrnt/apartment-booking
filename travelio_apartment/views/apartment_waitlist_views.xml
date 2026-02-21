@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_apartment_waitlist_tree" model="ir.ui.view">
+    <field name="name">travelio.apartment.waitlist.tree</field>
+    <field name="model">travelio.apartment.waitlist</field>
+    <field name="arch" type="xml">
+      <list>
+        <field name="name"/>
+        <field name="customer_id"/>
+        <field name="unit_id"/>
+        <field name="requested_at"/>
+        <field name="state" widget="badge"/>
+      </list>
+    </field>
+  </record>
+
+  <record id="view_apartment_waitlist_search" model="ir.ui.view">
+    <field name="name">travelio.apartment.waitlist.search</field>
+    <field name="model">travelio.apartment.waitlist</field>
+    <field name="arch" type="xml">
+        <search>
+            <field name="name"/>
+            <field name="unit_id"/>
+            <group>
+                <filter string="Unit" name="group_by_unit" context="{'group_by': 'unit_id'}"/>
+                <filter string="Status" name="group_by_state" context="{'group_by': 'state'}"/>
+            </group>
+        </search>
+    </field>
+</record>
+
+  <record id="action_apartment_waitlist" model="ir.actions.act_window">
+    <field name="name">Waitlist</field>
+    <field name="res_model">travelio.apartment.waitlist</field>
+    <field name="view_mode">list,form</field>
+    <field name="search_view_id" ref="view_apartment_waitlist_search"/>
+  </record>
+
+  <menuitem id="menu_apartment_waitlist" name="Waitlist" parent="menu_travelio_root" action="action_apartment_waitlist" sequence="30"/>
+</odoo>

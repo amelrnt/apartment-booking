@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <record id="ir_cron_apartment_booking_expire" model="ir.cron">
+      <field name="name">Apartment Booking: Auto Expire Hold</field>
+      <field name="model_id" ref="model_travelio_apartment_booking"/>
+      <field name="state">code</field>
+      <field name="code">model._cron_expire_hold()</field>
+      <field eval="True" name="active"/>
+      <field name="user_id" ref="base.user_root"/>
+      <field name="interval_number">5</field>
+      <field name="interval_type">minutes</field>
+    </record>
+  </data>
+</odoo>

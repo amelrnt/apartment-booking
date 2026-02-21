@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <record id="seq_apartment_booking" model="ir.sequence">
+      <field name="name">Apartment Booking Sequence</field>
+      <field name="code">travelio.apartment.booking</field>
+      <field name="prefix">AB/</field>
+      <field name="padding">5</field>
+      <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="seq_apartment_waitlist" model="ir.sequence">
+      <field name="name">Apartment Waitlist Sequence</field>
+      <field name="code">travelio.apartment.waitlist</field>
+      <field name="prefix">WL/</field>
+      <field name="padding">5</field>
+      <field name="company_id" eval="False"/>
+    </record>
+  </data>
+</odoo>

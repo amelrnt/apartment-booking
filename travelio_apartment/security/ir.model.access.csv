@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_apartment_unit,travelio.apartment.unit,model_travelio_apartment_unit,base.group_user,1,1,1,1
+access_apartment_booking,travelio.apartment.booking,model_travelio_apartment_booking,base.group_user,1,1,1,1
+access_apartment_waitlist,travelio.apartment.waitlist,model_travelio_apartment_waitlist,base.group_user,1,1,1,1
+access_booking_request_wizard,booking.request.wizard,model_booking_request_wizard,base.group_user,1,1,1,1
+access_booking_cancel_wizard,booking.cancel.wizard,model_booking_cancel_wizard,base.group_user,1,1,1,1
