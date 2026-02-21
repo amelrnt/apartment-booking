@@ -18,16 +18,16 @@
     <field name="name">travelio.apartment.waitlist.search</field>
     <field name="model">travelio.apartment.waitlist</field>
     <field name="arch" type="xml">
-        <search>
-            <field name="name"/>
-            <field name="unit_id"/>
-            <group>
-                <filter string="Unit" name="group_by_unit" context="{'group_by': 'unit_id'}"/>
-                <filter string="Status" name="group_by_state" context="{'group_by': 'state'}"/>
-            </group>
-        </search>
+      <search>
+        <field name="name"/>
+        <field name="unit_id"/>
+        <group>
+          <filter string="Unit" name="group_by_unit" context="{'group_by': 'unit_id'}"/>
+          <filter string="Status" name="group_by_state" context="{'group_by': 'state'}"/>
+        </group>
+      </search>
     </field>
-</record>
+  </record>
 
   <record id="action_apartment_waitlist" model="ir.actions.act_window">
     <field name="name">Waitlist</field>

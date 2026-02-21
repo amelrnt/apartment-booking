@@ -23,9 +23,9 @@ class ApartmentBooking(models.Model):
     ], string='Status', default='draft')
     cancel_reason = fields.Text(string='Cancel Reason')
     hold_expired_at = fields.Datetime(
-    string='Deadline Hold', 
-    index=True  # Optimization
-)
+        string='Deadline Hold', 
+        index=True  # Optimization
+    )
 
     @api.model
     def create(self, vals):

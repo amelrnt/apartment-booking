@@ -49,17 +49,17 @@
     <field name="name">travelio.apartment.booking.search</field>
     <field name="model">travelio.apartment.booking</field>
     <field name="arch" type="xml">
-        <search>
-            <field name="name"/>
-            <field name="customer_id"/>
-            <field name="unit_id"/>
-            <group>
-                <filter string="Status" name="group_by_state" context="{'group_by': 'state'}"/>
-                <filter string="Unit" name="group_by_unit" context="{'group_by': 'unit_id'}"/>
-            </group>
-        </search>
+      <search>
+        <field name="name"/>
+        <field name="customer_id"/>
+        <field name="unit_id"/>
+        <group>
+          <filter string="Status" name="group_by_state" context="{'group_by': 'state'}"/>
+          <filter string="Unit" name="group_by_unit" context="{'group_by': 'unit_id'}"/>
+        </group>
+      </search>
     </field>
-</record>
+  </record>
 
   <record id="action_apartment_booking" model="ir.actions.act_window">
     <field name="name">Bookings</field>
@@ -67,7 +67,7 @@
     <field name="view_mode">list,form</field>
     <field name="search_view_id" ref="view_apartment_booking_search"/>
   </record>
-  
+
   <menuitem id="menu_travelio_bookings" name="Bookings" parent="menu_travelio_root" action="action_apartment_booking" sequence="20"/>
-  
+
 </odoo>
